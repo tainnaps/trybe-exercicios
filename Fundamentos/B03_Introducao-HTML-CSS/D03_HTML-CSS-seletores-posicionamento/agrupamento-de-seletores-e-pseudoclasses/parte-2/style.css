@@ -42,3 +42,7 @@ body div:nth-of-type(4) h3{
 body div:nth-of-type(5) h3{
     background-color: khaki;
 }
+
+body div:nth-of-type(odd) h3 {
+    text-decoration: ;
+}
