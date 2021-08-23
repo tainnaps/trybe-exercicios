@@ -1,5 +1,26 @@
+body {
+    background-color: #f8edeb;
+    font-family: 'Urbanist', sans-serif;
+    color: #223843;
+}
+
 .header {
-    background-color: rgb(219, 217, 217);
+    background-color: #2a9d8f;
     padding: 15px;
     text-align: center;
+}
+
+.navigation {
+    text-align: center;
+    background-color: #f4a261;
+    padding: 5px 0;
+    position: sticky;
+}
+
+ul.nav-list li {
+    display: inline;
+    list-style: none;
+    margin: 40px;
+    font-size: 1.2em;
+    
 }
