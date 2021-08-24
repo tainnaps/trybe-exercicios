@@ -5,9 +5,15 @@ body {
     color: #223843;
 }
 
-.header, .footer {
+.header {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b5/Odontodactylus_scyllarus1.jpg);
+    padding: 80px;
+    text-align: center;
+}
+
+.footer {
     background-color: #2a9d8f;
-    padding: 50px;
+    padding: 40px;
     text-align: center;
 }
 
