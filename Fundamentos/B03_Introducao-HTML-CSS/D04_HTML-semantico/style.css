@@ -41,16 +41,26 @@ ul.nav-list li {
     margin: 30px auto;
 }
 
-.know-more {
-    width: 70%;
+section.references ul li a {
+    text-decoration: none;
+    color: #223843;
 }
 
 .vision, .aggressivity, .strength {
-    width: 18%;
+    width: 25%;
     height: 400px;
     display: inline-block;
+    margin-left: 27px;
 }
 
 section.section h2 {
+    text-align: center;
+}
+
+a:hover {
+    font-size: large;
+}
+
+section.aside p {
     text-align: center;
 }
