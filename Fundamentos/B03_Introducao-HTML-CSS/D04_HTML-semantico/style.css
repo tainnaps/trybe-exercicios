@@ -47,7 +47,7 @@ ul.nav-list li {
     margin: 30px auto;
 }
 
-section.references ul li a {
+section.references ul li a, nav ul li a{
     text-decoration: none;
     color: #223843;
 }
