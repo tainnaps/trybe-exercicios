@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     background-color: #f8edeb;
     font-family: 'Urbanist', sans-serif;
     color: #223843;
@@ -6,14 +7,14 @@ body {
 
 .header {
     background-color: #2a9d8f;
-    padding: 15px;
+    padding: 50px;
     text-align: center;
 }
 
 .navigation {
     text-align: center;
     background-color: #f4a261;
-    padding: 5px 0;
+    padding: 1px 0;
     position: sticky;
 }
 
@@ -22,5 +23,34 @@ ul.nav-list li {
     list-style: none;
     margin: 40px;
     font-size: 1.2em;
-    
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 3%;
+    margin: 20px;
+    padding: 30px;
+    text-align: justify;
+}
+
+.picture {
+    width: 200px;
+    height: 130px;
+    border-radius: 45%;
+    display: block;
+    margin: 30px auto;
+}
+
+.know-more {
+    width: 70%;
+}
+
+.vision, .aggressivity, .strength {
+    width: 18%;
+    height: 400px;
+    display: inline-block;
+}
+
+section.section h2 {
+    text-align: center;
 }
