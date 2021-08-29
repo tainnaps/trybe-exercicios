@@ -1,15 +1,14 @@
 // Questão 1
 
 const n = 5;
-let asteristics = "";
 
 if (n > 1) {
+  let asteristiks = "";
   for (let column = 0; column < n; column += 1) {
-    asteristics += "*";
+    asteristiks += "*";
   }
-
   for (let line = 0; line < n; line += 1) {
-    console.log(asteristics);
+    console.log(asteristiks);
   }
 } else {
   console.log("Entrada inválida.");
