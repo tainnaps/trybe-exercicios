@@ -13,6 +13,11 @@ info.recorrente = "Sim";
 //console.log(info);
 
 // Questão 3
-for (const key in info) {
+/*for (const key in info) {
   console.log(key);
+}*/
+
+// Questão 4
+for (const key in info) {
+  console.log(info[key]);
 }
