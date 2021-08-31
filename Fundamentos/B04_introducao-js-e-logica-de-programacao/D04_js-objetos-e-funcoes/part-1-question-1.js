@@ -1,4 +1,4 @@
-//Question 1
+//Part 1 - Question 1
 let info = {
   personagem: "Margarida",
   origem: "Pato Donald",
