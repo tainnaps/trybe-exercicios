@@ -56,12 +56,11 @@
 		colorChange('main-content', 'rgb(76,164,109)');
 		colorChange('center-content', 'rgb(255,255,255)');
 
-		function headingChange(idName, phrase) {
-			document.getElementById(idName).innerText = phrase;
+		function headingChange(tagName, sentence) {
+			document.getElementsByTagName(tagName)[0].innerText = sentence;
 		}
-		headingChange('title', 'Exercise 5.1 - DOM and selectors');
+		headingChange('h1', 'Exercise 5.1 - DOM and selectors');
 
-		//console.log(document.getElementsByTagName('h1'));
 
 		/*
 		Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
@@ -71,7 +70,7 @@
 		1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício) - OK
 		2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)) - OK
 		3. Crie uma função que mude a cor do quadrado vermelho para branco - OK
-		4. Crie uma função que corrija o texto da tag <h1>.
+		4. Crie uma função que corrija o texto da tag <h1> - OK
 		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 		6.  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 		*/
