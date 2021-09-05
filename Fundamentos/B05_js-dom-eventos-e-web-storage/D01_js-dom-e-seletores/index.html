@@ -50,10 +50,10 @@
 		}
 		textChange('description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum posuere nulla in vehicula. Nullam consectetur ullamcorper porta. Etiam rhoncus, enim nec sagittis fermentum, lacus tortor blandit enim, sodales pretium arcu mauris a libero. Aliquam euismod ultricies tellus eu convallis. Sed sollicitudin ornare lectus, vitae volutpat magna elementum eu. Integer velit sem, molestie nec mauris dictum, porta eleifend lorem. Integer in tincidunt tellus, non efficitur ligula.');
 
-		function colorChange(className, r, g, b) {
-			document.getElementsByClassName(className).style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+		function colorChange(className, color) {
+			document.getElementsByClassName(className)[0].style.backgroundColor = color;
 		}
-		colorChange('main-content', '76', '164', '109');
+		colorChange('main-content', 'rgb(76,164,109)');
 
 		function headingChange(idName, phrase) {
 			document.getElementById(idName).innerText = phrase;
@@ -68,7 +68,7 @@
 		- document.getElementsByClassName()
 		- document.getElementsByTagName()
 		1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício) - OK
-		2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+		2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)) - OK
 		3. Crie uma função que mude a cor do quadrado vermelho para branco.
 		4. Crie uma função que corrija o texto da tag <h1>.
 		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
