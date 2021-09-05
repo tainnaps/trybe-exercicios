@@ -61,6 +61,19 @@
 		}
 		headingChange('h1', 'Exercise 5.1 - DOM and selectors');
 
+		function changeTextToUpperCase(idName) {
+			let text = document.getElementById(idName).innerText;
+			//let upperCaseText = text.toUpperCase();
+		}
+		changeTextToUpperCase('description');
+
+		function consoleExhibition(tagName) {
+			let tag = document.getElementsByTagName(tagName);
+			for (let index = 0; index < tag.length; index += 1) {
+				console.log(tag[index].innerText);
+			}
+		}
+		consoleExhibition('p');
 
 		/*
 		Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
@@ -72,7 +85,7 @@
 		3. Crie uma função que mude a cor do quadrado vermelho para branco - OK
 		4. Crie uma função que corrija o texto da tag <h1> - OK
 		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-		6.  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+		6.  Crie uma função que exiba o conteúdo de todas as tags <p> no console - OK
 		*/
 	</script>
 </body>
