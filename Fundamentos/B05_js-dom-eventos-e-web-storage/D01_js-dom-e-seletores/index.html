@@ -48,7 +48,7 @@
 		function textChange(idName, text) {
 			document.getElementById(idName).innerText = text;
 		}
-		textChange('description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum posuere nulla in vehicula. Nullam consectetur ullamcorper porta. Etiam rhoncus, enim nec sagittis fermentum, lacus tortor blandit enim, sodales pretium arcu mauris a libero. Aliquam euismod ultricies tellus eu convallis. Sed sollicitudin ornare lectus, vitae volutpat magna elementum eu. Integer velit sem, molestie nec mauris dictum, porta eleifend lorem. Integer in tincidunt tellus, non efficitur ligula.');
+		textChange('description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum posuere nulla in vehicula.');
 
 		function colorChange(className, color) {
 			document.getElementsByClassName(className)[0].style.backgroundColor = color;
@@ -62,18 +62,19 @@
 		headingChange('h1', 'Exercise 5.1 - DOM and selectors');
 
 		function changeTextToUpperCase(idName) {
-			let text = document.getElementById(idName).innerText;
-			//let upperCaseText = text.toUpperCase();
+			const element = document.getElementById(idName);
+			const text = element.innerText.toUpperCase();
+			element.innerText = text;
 		}
 		changeTextToUpperCase('description');
 
-		function consoleExhibition(tagName) {
-			let tag = document.getElementsByTagName(tagName);
-			for (let index = 0; index < tag.length; index += 1) {
-				console.log(tag[index].innerText);
+		function contentExhibition(tagName) {
+			let tagList = document.getElementsByTagName(tagName);
+			for (const element of tagList) {
+				console.log(element.innerText);
 			}
 		}
-		consoleExhibition('p');
+		contentExhibition('p');
 
 		/*
 		Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
@@ -84,7 +85,7 @@
 		2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)) - OK
 		3. Crie uma função que mude a cor do quadrado vermelho para branco - OK
 		4. Crie uma função que corrija o texto da tag <h1> - OK
-		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+		5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo - OK
 		6.  Crie uma função que exiba o conteúdo de todas as tags <p> no console - OK
 		*/
 	</script>
