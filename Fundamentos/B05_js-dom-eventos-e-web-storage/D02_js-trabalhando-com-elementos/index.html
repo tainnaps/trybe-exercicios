@@ -67,7 +67,7 @@
       element.className = nameOfClass;
     }
 
-    function appendChildElement(parentElement, childElement) {
+    function appendElement(parentElement, childElement) {
       parentElement.appendChild(childElement);
     }
 
@@ -75,7 +75,7 @@
       element.innerText = text;
     }
 
-    function removeChildElement(parentElement, childElement) {
+    function removeElement(parentElement, childElement) {
       parentElement.removeChild(childElement);
     }
 
@@ -84,69 +84,69 @@
     let h1 = createElementHTML('h1');
     let h1Content = 'Exercício 5.2 - JavaScript DOM';
     changeInnerText(h1, h1Content);
-    appendChildElement(body, h1);
+    appendElement(body, h1);
 
     //Questão 2
     let main = createElementHTML('main');
     defineClassName(main, 'main-content');
-    appendChildElement(body, main);
+    appendElement(body, main);
 
     //Questão 3
     let centerSection = createElementHTML('section');
     defineClassName(centerSection, 'center-content');
-    appendChildElement(main, centerSection);
+    appendElement(main, centerSection);
 
     //Questão 4
     let paragraph = createElementHTML('p');
     let paragraphContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit auctor nisl, ut lobortis nulla posuere egestas. Vivamus id augue sed nisi tempor accumsan.';
     changeInnerText(paragraph, paragraphContent);
-    appendChildElement(centerSection, paragraph);
+    appendElement(centerSection, paragraph);
 
     //Questão 5
     let leftSection = createElementHTML('section');
     defineClassName(leftSection, 'left-content');
-    appendChildElement(main, leftSection);
+    appendElement(main, leftSection);
 
     //Questão 6
     let rightSection = createElementHTML('section');
     defineClassName(rightSection, 'right-content');
-    appendChildElement(main, rightSection);
+    appendElement(main, rightSection);
 
     //Questão 7
     let image = createElementHTML('img');
     image.src = 'https://picsum.photos/200';
     defineClassName(image, 'small-image');
-    appendChildElement(leftSection, image);
+    appendElement(leftSection, image);
 
     //Questão 8
     let unorderedList = createElementHTML('ul');
-    appendChildElement(rightSection, unorderedList);
+    appendElement(rightSection, unorderedList);
 
     let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
     for (const element of numbers) {
       let listItem = createElementHTML('li');
       changeInnerText(listItem, element);
-      appendChildElement(unorderedList, listItem);
+      appendElement(unorderedList, listItem);
     }
 
     //Questão 9
     for (let index = 0; index < 3; index += 1) {
       let h3 = createElementHTML('h3');
       defineClassName(h3, 'description');
-      appendChildElement(main, h3);
+      appendElement(main, h3);
     }
 
     defineClassName(h1, 'title');
 
-    removeChildElement(main, leftSection);
+    removeElement(main, leftSection);
 
     rightSection.style.marginRight = 'auto';
 
     centerSection.parentElement.style.backgroundColor = 'green';
 
     let listItems = document.querySelectorAll('li');
-    removeChildElement(unorderedList, listItems[8]);
-    removeChildElement(unorderedList, listItems[9]);
+    removeElement(unorderedList, listItems[8]);
+    removeElement(unorderedList, listItems[9]);
   </script>
 </body>
 
