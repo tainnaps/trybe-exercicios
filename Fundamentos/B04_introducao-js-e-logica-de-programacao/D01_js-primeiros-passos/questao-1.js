@@ -2,13 +2,25 @@
 
 const a = 7;
 const b = 5;
+let operation = '+';
 
-console.log(a + b);
-
-console.log(a - b);
-
-console.log(a * b);
-
-console.log(a / b);
-
-console.log(a % b);
+switch (operation) {
+  case '+':
+    console.log(a + b);
+    break;
+  case '-':
+    console.log(a - b);
+    break;
+  case '*':
+    console.log(a * b);
+    break;
+  case '/':
+    console.log(a / b);
+    break;
+  case '%':
+    console.log(a % b);
+    break;
+  default:
+    console.log('Operação inválida.');
+    break;
+}
