@@ -60,20 +60,10 @@
 <body>
   <script>
     // Questão 1
-    let bodyTag = document.getElementsByTagName('body')[0];
-    let headingH1 = document.createElement('h1');
-    headingH1.innerText = 'Exercício 5.2 - JavaScript DOM';
-    bodyTag.appendChild(headingH1);
-
-    // Questão 2
-    let mainTag = document.createElement('main');
-    mainTag.className = 'main-content';
-    bodyTag.appendChild(mainTag);
-
-    // Questão 3
-    let mainTag = document.createElement('main');
-    mainTag.className = 'main-content';
-    bodyTag.appendChild(mainTag);
+    const body = document.querySelector('body');
+    let h1 = document.createElement('h1');
+    h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+    body.appendChild(h1);
 
   </script>
 </body>
