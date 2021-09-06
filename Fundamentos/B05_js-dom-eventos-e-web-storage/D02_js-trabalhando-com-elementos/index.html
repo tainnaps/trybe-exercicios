@@ -62,7 +62,6 @@
     // Questão 1
     const body = document.querySelector('body');
     let h1 = document.createElement('h1');
-    h1.className = 'title';
     h1.innerText = 'Exercício 5.2 - JavaScript DOM';
     body.appendChild(h1);
 
@@ -75,7 +74,6 @@
     let centerSection = document.createElement('section');
     centerSection.className = 'center-content';
     main.appendChild(centerSection);
-    centerSection.parentElement.style.backgroundColor = 'green';
 
     //Questão 4
     let paragraph = document.createElement('p');
@@ -90,7 +88,6 @@
     //Questão 6
     let rightSection = document.createElement('section');
     rightSection.className = 'right-content';
-    rightSection.style.marginRight = 'auto';
     main.appendChild(rightSection);
 
     //Questão 7
@@ -117,7 +114,14 @@
       main.appendChild(h3);
     }
 
+    h1.className = 'title';
     main.removeChild(leftSection);
+    rightSection.style.marginRight = 'auto';
+    centerSection.parentElement.style.backgroundColor = 'green';
+
+    let listItems = document.querySelectorAll('li');
+    unorderedList.removeChild(listItems[8]);
+    unorderedList.removeChild(listItems[9]);
 
   </script>
 </body>
