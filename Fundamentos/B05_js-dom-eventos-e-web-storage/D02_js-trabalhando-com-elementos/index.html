@@ -96,6 +96,17 @@
     image.className = 'small-image';
     leftSection.appendChild(image);
 
+    //Questão 8
+    let unorderedList = document.createElement('ul');
+    rightSection.appendChild(unorderedList);
+
+    let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    for (const element of numbers) {
+      let listItem = document.createElement('li');
+      listItem.innerText = element;
+      unorderedList.appendChild(listItem);
+    }
+
   </script>
 </body>
 
