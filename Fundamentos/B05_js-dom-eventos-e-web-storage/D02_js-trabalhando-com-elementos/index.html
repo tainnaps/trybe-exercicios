@@ -59,22 +59,31 @@
 
 <body>
   <script>
-    function createElementHTML(tag) {
-      return document.createElement(tag);
+    function createElementHTML(tagName) {
+      return document.createElement(tagName);
     }
 
-    function defineClassName(variable, nameOfClass) {
-      variable.className = nameOfClass;
+    function defineClassName(element, nameOfClass) {
+      element.className = nameOfClass;
     }
 
-    function appendChildElement(parent, child) {
-      parent.appendChild(child);
+    function appendChildElement(parentElement, childElement) {
+      parentElement.appendChild(childElement);
+    }
+
+    function changeInnerText(element, text) {
+      element.innerText = text;
+    }
+
+    function removeChildElement(parentElement, childElement) {
+      parentElement.removeChild(childElement);
     }
 
     // Questão 1
     const body = document.querySelector('body');
     let h1 = createElementHTML('h1');
-    h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+    let h1Content = 'Exercício 5.2 - JavaScript DOM';
+    changeInnerText(h1, h1Content);
     appendChildElement(body, h1);
 
     //Questão 2
@@ -89,7 +98,8 @@
 
     //Questão 4
     let paragraph = createElementHTML('p');
-    paragraph.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit auctor nisl, ut lobortis nulla posuere egestas. Vivamus id augue sed nisi tempor accumsan.';
+    let paragraphContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit auctor nisl, ut lobortis nulla posuere egestas. Vivamus id augue sed nisi tempor accumsan.';
+    changeInnerText(paragraph, paragraphContent);
     appendChildElement(centerSection, paragraph);
 
     //Questão 5
@@ -115,7 +125,7 @@
     let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
     for (const element of numbers) {
       let listItem = createElementHTML('li');
-      listItem.innerText = element;
+      changeInnerText(listItem, element);
       appendChildElement(unorderedList, listItem);
     }
 
@@ -125,19 +135,18 @@
       defineClassName(h3, 'description');
       appendChildElement(main, h3);
     }
-    /*
+
     defineClassName(h1, 'title');
-    
-    main.removeChild(leftSection);
-    
+
+    removeChildElement(main, leftSection);
+
     rightSection.style.marginRight = 'auto';
-    
+
     centerSection.parentElement.style.backgroundColor = 'green';
 
     let listItems = document.querySelectorAll('li');
-    unorderedList.removeChild(listItems[8]);
-    unorderedList.removeChild(listItems[9]);
-    */
+    removeChildElement(unorderedList, listItems[8]);
+    removeChildElement(unorderedList, listItems[9]);
   </script>
 </body>
 
