@@ -2,10 +2,19 @@ ol li {
   background-color: yellow;
 }
 
-ol li:nth-child(even) {
+ol li:nth-of-type(even) {
   color: green;
 }
 
-ol li:nth-child(odd) {
+ol li:nth-of-type(odd) {
   text-transform: uppercase;
+}
+
+.header {
+  color: red;
+}
+
+.header em {
+  font-size: 40px;
+  border: 1px solid black;
 }
