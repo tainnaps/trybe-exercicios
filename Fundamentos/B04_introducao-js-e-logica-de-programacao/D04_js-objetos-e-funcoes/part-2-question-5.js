@@ -1,4 +1,4 @@
-// Part 2 - Question 4
+// Part 2 - Question 5
 function countRepetition(numbers) {
   let repetitions = [];
 
