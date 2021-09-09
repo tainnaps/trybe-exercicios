@@ -71,4 +71,13 @@ holidayButton.addEventListener('click', function () {
   }
 });
 
+// Exercício 4
+function createFridayButton(buttonContent) {
+  fridayButton = document.createElement('button');
+  fridayButton.id = 'btn-friday';
+  fridayButton.innerText = buttonContent;
+  divButtons.appendChild(fridayButton);
+}
+
+createFridayButton('Sexta-feira');
 
