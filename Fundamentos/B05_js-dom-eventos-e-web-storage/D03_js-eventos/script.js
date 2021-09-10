@@ -165,3 +165,26 @@ function taskSelection() {
 }
 
 taskSelection();
+
+// Exercício 10
+let daysCounter = 0;
+
+function changeMonthDaysColor() {
+  const taskColorClasses = taskColor.classList;
+
+  for (const monthDay of monthDays) {
+    monthDay.addEventListener('click', function (event) {
+      if (taskColorClasses.contains('selected')) {
+        daysCounter += 1;
+
+        if ((daysCounter % 2) === 0) {
+          event.target.style.color = 'rgb(119,119,119)';
+        } else {
+          event.target.style.color = taskColor.style.backgroundColor;
+        }
+      }
+    });
+  }
+}
+
+changeMonthDaysColor();
