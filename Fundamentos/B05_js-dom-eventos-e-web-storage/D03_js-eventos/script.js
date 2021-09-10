@@ -137,3 +137,13 @@ function addTask(name) {
 }
 
 addTask('Estudar conteúdo do dia');
+
+// Exercício 8
+function addColorSubtitle(color) {
+  const div = document.createElement('div');
+  div.className = 'task';
+  div.style.backgroundColor = color;
+  divTasks.appendChild(div);
+}
+
+addColorSubtitle('rgb(3, 187, 133');
