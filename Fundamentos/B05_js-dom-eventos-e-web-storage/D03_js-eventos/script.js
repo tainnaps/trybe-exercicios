@@ -57,19 +57,23 @@ const holidayButton = createHolidayButton('Feriados');
 const holidays = document.querySelectorAll('.holiday');
 let holidaysCounter = 0;
 
-holidayButton.addEventListener('click', function () {
-  holidaysCounter += 1;
+function changeHolidaysBackgroundColor() {
+  holidayButton.addEventListener('click', function () {
+    holidaysCounter += 1;
 
-  if ((holidaysCounter % 2) === 0) {
-    for (let index = 0; index < holidays.length; index += 1) {
-      holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+    if ((holidaysCounter % 2) === 0) {
+      for (let index = 0; index < holidays.length; index += 1) {
+        holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+      }
+    } else {
+      for (let index = 0; index < holidays.length; index += 1) {
+        holidays[index].style.backgroundColor = 'rgb(255, 255, 255)';
+      }
     }
-  } else {
-    for (let index = 0; index < holidays.length; index += 1) {
-      holidays[index].style.backgroundColor = 'rgb(255, 255, 255)';
-    }
-  }
-});
+  });
+}
+
+changeHolidaysBackgroundColor();
 
 // Exercício 4
 function createFridayButton(buttonContent) {
@@ -91,19 +95,23 @@ for (let index = 0; index < fridays.length; index += 1) {
   fridaysBackup[index] = fridays[index].innerText;
 }
 
-fridayButton.addEventListener('click', function () {
-  fridaysCounter += 1;
+function changeFridaysContent() {
+  fridayButton.addEventListener('click', function () {
+    fridaysCounter += 1;
 
-  if ((fridaysCounter % 2) === 0) {
-    for (let index = 0; index < fridays.length; index += 1) {
-      fridays[index].innerText = fridaysBackup[index];
+    if ((fridaysCounter % 2) === 0) {
+      for (let index = 0; index < fridays.length; index += 1) {
+        fridays[index].innerText = fridaysBackup[index];
+      }
+    } else {
+      for (let index = 0; index < fridays.length; index += 1) {
+        fridays[index].innerText = 'SEXTOU!!';
+      }
     }
-  } else {
-    for (let index = 0; index < fridays.length; index += 1) {
-      fridays[index].innerText = 'SEXTOU!!';
-    }
-  }
-});
+  });
+}
+
+changeFridaysContent();
 
 // Exercício 6
 const monthDays = document.querySelectorAll('.day');
