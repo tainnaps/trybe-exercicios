@@ -22,7 +22,7 @@ function createDezDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
   for (let index = 0; index < dezDaysList.length; index += 1) {
-    listItem = document.createElement('li');
+    let listItem = document.createElement('li');
     listItem.innerText = dezDaysList[index];
     listItem.className = 'day';
     daysList.appendChild(listItem);
@@ -43,13 +43,14 @@ createDezDays();
 const divButtons = document.querySelector('.buttons-container');
 
 function createHolidayButton(buttonContent) {
-  holidayButton = document.createElement('button');
-  holidayButton.id = 'btn-holiday';
-  holidayButton.innerText = buttonContent;
-  divButtons.appendChild(holidayButton);
+  const button = document.createElement('button');
+  button.id = 'btn-holiday';
+  button.innerText = buttonContent;
+  divButtons.appendChild(button);
+  return button;
 }
 
-createHolidayButton('Feriados');
+const holidayButton = createHolidayButton('Feriados');
 
 
 // Exercício 3
@@ -72,13 +73,14 @@ holidayButton.addEventListener('click', function () {
 
 // Exercício 4
 function createFridayButton(buttonContent) {
-  fridayButton = document.createElement('button');
-  fridayButton.id = 'btn-friday';
-  fridayButton.innerText = buttonContent;
-  divButtons.appendChild(fridayButton);
+  const button = document.createElement('button');
+  button.id = 'btn-friday';
+  button.innerText = buttonContent;
+  divButtons.appendChild(button);
+  return button;
 }
 
-createFridayButton('Sexta-feira');
+const fridayButton = createFridayButton('Sexta-feira');
 
 // Exercício 5
 const fridays = document.querySelectorAll('.friday');
