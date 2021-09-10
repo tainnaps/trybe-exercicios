@@ -108,14 +108,32 @@ fridayButton.addEventListener('click', function () {
 // Exercício 6
 const monthDays = document.querySelectorAll('.day');
 
-for (const monthDay of monthDays) {
-  monthDay.addEventListener('mouseover', function (event) {
-    event.target.style.fontSize = 'x-large';
-  });
+function giveZoom() {
+  for (const monthDay of monthDays) {
+    monthDay.addEventListener('mouseover', function (event) {
+      event.target.style.fontSize = 'x-large';
+    });
+  }
 }
 
-for (const monthDay of monthDays) {
-  monthDay.addEventListener('mouseout', function (event) {
-    event.target.style.fontSize = '20px';
-  });
+function takeZoomOut() {
+  for (const monthDay of monthDays) {
+    monthDay.addEventListener('mouseout', function (event) {
+      event.target.style.fontSize = '20px';
+    });
+  }
 }
+
+giveZoom();
+takeZoomOut();
+
+// Exercício 7
+const divTasks = document.querySelector('.my-tasks');
+
+function addTask(name) {
+  const task = document.createElement('span');
+  task.innerText = name;
+  divTasks.appendChild(task);
+}
+
+addTask('Estudar conteúdo do dia');
