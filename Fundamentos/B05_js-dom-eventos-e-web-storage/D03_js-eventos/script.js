@@ -139,11 +139,29 @@ function addTask(name) {
 addTask('Estudar conteúdo do dia');
 
 // Exercício 8
-function addColorSubtitle(color) {
+function addTaskColor(color) {
   const div = document.createElement('div');
   div.className = 'task';
   div.style.backgroundColor = color;
   divTasks.appendChild(div);
 }
 
-addColorSubtitle('rgb(3, 187, 133');
+addTaskColor('rgb(3, 187, 133');
+
+// Exercício 9
+const taskColor = document.querySelector('.task');
+let taskCounter = 0;
+
+function taskSelection() {
+  taskColor.addEventListener('click', function (event) {
+    taskCounter += 1;
+
+    if ((taskCounter % 2) === 0) {
+      event.target.classList.remove('selected');
+    } else {
+      event.target.classList.add('selected');
+    }
+  });
+}
+
+taskSelection();
