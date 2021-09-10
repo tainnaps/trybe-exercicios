@@ -66,7 +66,7 @@ holidayButton.addEventListener('click', function () {
     }
   } else {
     for (let index = 0; index < holidays.length; index += 1) {
-      holidays[index].style.backgroundColor = 'rgb(3, 187, 133)';
+      holidays[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   }
 });
@@ -100,9 +100,22 @@ fridayButton.addEventListener('click', function () {
     }
   } else {
     for (let index = 0; index < fridays.length; index += 1) {
-      fridays[index].innerText = 'Sexta-feira';
+      fridays[index].innerText = 'SEXTOU!!';
     }
   }
 });
 
+// Exercício 6
+const monthDays = document.querySelectorAll('.day');
 
+for (const monthDay of monthDays) {
+  monthDay.addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = 'x-large';
+  });
+}
+
+for (const monthDay of monthDays) {
+  monthDay.addEventListener('mouseout', function (event) {
+    event.target.style.fontSize = '20px';
+  });
+}
