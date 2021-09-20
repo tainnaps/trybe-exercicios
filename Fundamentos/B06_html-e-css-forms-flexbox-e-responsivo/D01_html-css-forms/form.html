@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>Curriculum Registration</h1>
+    <p><em>If you are interested to work with our company, please, register
+        your curriculum.</em></p>
+  </header>
+  <main>
+    <form action="#" method="GET">
+      <fieldset>
+        <legend>Personal Data</legend>
+        <label for="person-name">Name</label>
+        <input type="text" name="name" id="person-name" maxlength="40"
+          required>
+        <label for="email-address">Email</label>
+        <input type="email" name="email" id="email-address" maxlength="50"
+          required>
+        <label for="person-cpf">CPF</label>
+        <input type="text" name="cpf" id="person-cpf" maxlength="11" required>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" maxlength="200"
+          required>
+        <label for="town">Town</label>
+        <input type="text" name="town" id="town" maxlength="28" required>
+        <label for="state">State</label>
+        <select name="state" id="state" required></select>
+        <label for="house">House</label>
+        <input type="radio" name="house-type" value="house" id="house"
+          required>
+        <label for="apartment">Apartment</label>
+        <input type="radio" name="house-type" value="apartment" id="apartment"
+          required>
+      </fieldset>
+      <fieldset>
+        <legend>Last Job Data</legend>
+        <label for="curriculum-abstract">Curriculum Abstract</label>
+        <textarea name="abstract" id="curriculum-abstract" cols="60" rows="10"
+          maxlength="1000"
+          placeholder="Tell us a little bit about your curriculum"
+          required></textarea>
+        <label for="job-title">Job Title</label>
+        <input type="text" name="last-job" id="job-title" maxlength="40"
+          required>
+        <label for="job-description">Job Description</label>
+        <input type="text" name="last-job-description" id="job-description"
+          maxlength="500" required>
+        <label for="start-date">Start Date</label>
+        <input type="text" name="last-job-start" id="start-date" required>
+      </fieldset>
+      <button type="submit" id="submit-button">Submit</button>
+      <button type="reset" id="reset-button">Reset</button>
+    </form>
+    <div id="results"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
