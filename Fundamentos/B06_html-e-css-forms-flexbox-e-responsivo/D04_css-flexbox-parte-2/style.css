@@ -57,12 +57,17 @@ body {
 .movie-container h2 {
   margin: 40px 0;
   text-align: center;
+  flex-basis: 700px;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.card-container div {
+  flex-basis: 16%;
 }
 
 .card-container div {
