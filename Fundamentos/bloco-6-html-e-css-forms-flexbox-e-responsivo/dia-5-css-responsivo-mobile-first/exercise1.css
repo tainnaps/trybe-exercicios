@@ -83,17 +83,19 @@ img {
   }
 
   h1 {
+    font-size: 32px;
     margin: 30px 0;
     text-align: center;
   }
 
   h2 {
+    font-size: 28px;
     margin: 30px 0;
     text-align: center;
   }
 
   p {
-    font-size: larger;
+    font-size: x-large;
     margin: 20px 0;
     width: 100%;
     text-align: center;
@@ -108,7 +110,7 @@ img {
   }
 
   figcaption {
-    font-size: large;
+    font-size: larger;
     margin-top: 15px;
   }
 
