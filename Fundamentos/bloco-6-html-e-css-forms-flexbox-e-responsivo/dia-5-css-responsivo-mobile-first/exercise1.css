@@ -34,8 +34,20 @@ img {
   max-width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
   body {
     background-color: aliceblue;
+  }
+
+  h1 {
+
+  }
+
+  p {
+    font-size: larger;
+  }
+
+  figcaption {
+    font-size: large;
   }
 }
