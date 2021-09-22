@@ -12,6 +12,10 @@ p {
   font-size: large;
 }
 
+main figure {
+  margin-bottom: 30px;
+}
+
 img {
   max-width: 100%;
 }
