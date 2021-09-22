@@ -1,19 +1,26 @@
-body {
+*{
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  margin: 30px;
 }
 h1 {
   font-size: 28px;
+  margin: 20px 0;
 }
 h2 {
-
+  margin: 20px 0;
 }
 
 p {
   font-size: large;
+  margin: 15px 0;
 }
 
-main figure {
-  margin-bottom: 30px;
+figcaption {
+  margin-top: 10px;
 }
 
 img {
@@ -21,5 +28,5 @@ img {
 }
 
 figure {
-  margin: 0;
+  margin-bottom: 30px;
 }
