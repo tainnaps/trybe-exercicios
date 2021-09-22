@@ -75,3 +75,47 @@ img {
     justify-content: space-around;
   }
 }
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: rgb(225, 231, 236);
+    margin: 50px;
+  }
+
+  h1 {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  p {
+    font-size: larger;
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  figure {
+    width: 45%;
+    margin-bottom: 35px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  figcaption {
+    font-size: large;
+    margin-top: 15px;
+  }
+
+  #figures-container {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
