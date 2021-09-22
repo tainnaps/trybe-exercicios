@@ -30,6 +30,7 @@ figcaption {
 
 img {
   max-width: 100%;
+  border-radius: 5%;
 }
 
 @media screen and (min-width: 800px) {
