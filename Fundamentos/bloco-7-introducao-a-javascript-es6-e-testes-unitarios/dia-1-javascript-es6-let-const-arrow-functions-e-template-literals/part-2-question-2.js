@@ -1,5 +1,5 @@
 // Part 2 - question 2
-const getLongestWord = (phrase) => {
+const longestWord = (phrase) => {
   const words = phrase.split(' ');
   const lengths = [];
   for (let i = 0; i < words.length; i += 1) {
@@ -9,4 +9,4 @@ const getLongestWord = (phrase) => {
   return words[index];
 };
 
-console.log(`The longest word is '${getLongestWord('Antônio foi no banheiro e não sabemos o que aconteceu')}'.`);
+console.log(`The longest word is '${longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')}'.`);
