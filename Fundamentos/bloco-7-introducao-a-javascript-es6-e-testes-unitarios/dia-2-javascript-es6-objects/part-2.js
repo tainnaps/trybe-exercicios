@@ -42,7 +42,21 @@ const getObjectValues = (object) => Object.values(object);
 // console.log(getObjectValues(lesson2));
 
 // Question 5
+const joinLessons = () => {
+  const allLessons = new Object();
 
+  for (let i = 1; i < 4; i += 1) {
+    allLessons[`lesson${i}`] = {};
+  }
+
+  Object.assign(allLessons.lesson1, lesson1);
+  Object.assign(allLessons.lesson2, lesson2);
+  Object.assign(allLessons.lesson3, lesson3);
+
+  return allLessons;
+};
+
+console.log(joinLessons());
 
 // Question 6
 
