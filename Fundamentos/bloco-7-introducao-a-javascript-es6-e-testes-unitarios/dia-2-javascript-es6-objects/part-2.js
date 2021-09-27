@@ -44,15 +44,12 @@ const getObjectValues = (object) => Object.values(object);
 // Question 5
 const joinLessons = () => {
   const allLessons = new Object();
-
   for (let i = 1; i < 4; i += 1) {
     allLessons[`lesson${i}`] = {};
   }
-
   Object.assign(allLessons.lesson1, lesson1);
   Object.assign(allLessons.lesson2, lesson2);
   Object.assign(allLessons.lesson3, lesson3);
-
   return allLessons;
 };
 
@@ -71,6 +68,8 @@ const calcTotalOfStudents = () => {
 // console.log(calcTotalOfStudents());
 
 // Question 7
+const getValueByPosition = (object, position) => getObjectValues(object)[position];
 
+console.log(getValueByPosition(lesson1, 0));
 
 // Question 8
