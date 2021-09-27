@@ -27,10 +27,14 @@ addPairKeyValue(lesson2, 'turno', 'noturno');
 // console.log(lesson2);
 
 // Question 2
+const getObjectKeys = (object) => Object.keys(object);
 
+// console.log(getObjectKeys(lesson2));
 
 // Question 3
+const getObjectLength = (object) => Object.entries(object).length;
 
+console.log(getObjectLength(lesson2));
 
 // Question 4
 
