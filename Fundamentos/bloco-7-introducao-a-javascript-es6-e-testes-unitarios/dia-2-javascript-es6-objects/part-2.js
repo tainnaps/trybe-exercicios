@@ -34,10 +34,12 @@ const getObjectKeys = (object) => Object.keys(object);
 // Question 3
 const getObjectLength = (object) => Object.entries(object).length;
 
-console.log(getObjectLength(lesson2));
+// console.log(getObjectLength(lesson2));
 
 // Question 4
+const getObjectValues = (object) => Object.values(object);
 
+// console.log(getObjectValues(lesson2));
 
 // Question 5
 
