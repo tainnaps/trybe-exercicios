@@ -37,15 +37,14 @@ const order = {
 
 // Question 1
 const customerInfo = (order) => {
-  return `Hello Ana Silveira, delivery to: ${order.name}, phone number: ${order.phoneNumber}, ${order.address.street}, nº: ${order.address.number}, AP: ${order.address.apartment}`;
+  return `Hello Ana Silveira, delivery to: ${order.name}, phone number: ${order.phoneNumber}, ${order.address.street}, nº: ${order.address.number}, AP: ${order.address.apartment}.`;
 };
 
 console.log(customerInfo(order));
 
 // Question 2
-const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
-
+const orderModifier = (order, buyer) => {
+  return `Hello ${order.name = buyer}, the total price of your ${Object.keys(order.order.pizza)} and ${order.order.drinks.coke.type} order is ${order.payment = 'R$ 50,00.'}`;
 };
 
-orderModifier(order);
+console.log(`\n ${orderModifier(order, 'Luiz Silva')}`);
