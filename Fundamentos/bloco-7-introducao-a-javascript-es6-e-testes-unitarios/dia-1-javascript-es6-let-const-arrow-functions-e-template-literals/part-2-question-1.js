@@ -1,5 +1,5 @@
 // Part 2 - question 1
-const calcFactorial = (number) => {
+const factorial = (number) => {
   let factorial = 1;
   for (let i = 1; i <= number; i += 1) {
     factorial *= i;
@@ -7,6 +7,7 @@ const calcFactorial = (number) => {
   return factorial;
 };
 
-const getFactorial = (number) => (number > 0) ? calcFactorial(number) : 1;
+// Bônus:
+// const factorial = (number) => (number > 0) ? factorial(number) : 1;
 
-console.log(getFactorial(4));
+console.log(factorial(4));

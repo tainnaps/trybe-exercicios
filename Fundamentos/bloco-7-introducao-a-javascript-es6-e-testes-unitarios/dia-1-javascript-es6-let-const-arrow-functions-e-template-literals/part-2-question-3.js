@@ -3,14 +3,15 @@ const main = document.querySelector('main');
 
 const button = document.querySelector('button');
 
-const section = document.createElement('section');
-main.appendChild(section);
+const paragraph = document.createElement('p');
+main.appendChild(paragraph);
 
 let clickCount = 0;
 
 window.onload = () => {
   button.addEventListener('click', () => {
+    const phrase = 'You have clicked the button';
     clickCount += 1;
-    section.innerText = clickCount > 1 ? `You have clicked the button ${clickCount} times.` : `You have clicked the button ${clickCount} time.`;
+    paragraph.innerText = clickCount > 1 ? `${phrase} ${clickCount} times.` : `${phrase} ${clickCount} time.`;
   });
 };
