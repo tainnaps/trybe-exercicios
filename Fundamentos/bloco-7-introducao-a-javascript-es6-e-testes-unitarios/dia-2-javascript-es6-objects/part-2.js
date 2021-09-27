@@ -22,7 +22,7 @@ const lesson3 = {
 // Question 1
 const addPairKeyValue = (object, key, value) => { object[key] = value; };
 
-addPairKeyValue(lesson2, 'turno', 'noturno');
+addPairKeyValue(lesson2, 'turno', 'noite');
 
 // console.log(lesson2);
 
@@ -56,10 +56,19 @@ const joinLessons = () => {
   return allLessons;
 };
 
-console.log(joinLessons());
+// console.log(joinLessons());
 
 // Question 6
+const calcTotalOfStudents = () => {
+  const allLessons = joinLessons();
+  let totalOfStudents = 0;
+  for (let i = 0; i < getObjectLength(allLessons); i += 1) {
+    totalOfStudents += allLessons[`lesson${i + 1}`].numeroEstudantes;
+  }
+  return totalOfStudents;
+};
 
+// console.log(calcTotalOfStudents());
 
 // Question 7
 
