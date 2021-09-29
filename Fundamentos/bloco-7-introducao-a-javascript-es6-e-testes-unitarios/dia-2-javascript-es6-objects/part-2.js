@@ -70,6 +70,9 @@ const calcTotalOfStudents = () => {
 // Question 7
 const getValueByPosition = (object, position) => getObjectValues(object)[position];
 
-console.log(getValueByPosition(lesson1, 0));
+// console.log(getValueByPosition(lesson1, 0));
 
 // Question 8
+const verifyPair = (object, key, value) => (getObjectKeys(object).includes(key)) && (object[key] === value);
+
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
