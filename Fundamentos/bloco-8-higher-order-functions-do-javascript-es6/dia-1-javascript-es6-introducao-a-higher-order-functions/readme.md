@@ -58,7 +58,7 @@ const battleMembers = { mage, warrior, dragon };
 
 ### Parte II
 
-Agora que você já possui a implementação das funções relativas aos três exercícios anteriores, passe-as como parâmetro para outras funções que irão compor um objeto gameActions . O objeto será composto por ações do jogo e cada ação é por denifição uma HOF , pois neste caso, são funções que recebem como parâmetro outra função.
+Agora que você já possui a implementação das funções relativas aos três exercícios anteriores, passe-as como parâmetro para outras funções que irão compor um objeto gameActions . O objeto será composto por ações do jogo e cada ação é por definição uma HOF , pois neste caso, são funções que recebem como parâmetro outra função.
 
 Copie o código abaixo e inicie sua implementação:
 ```
