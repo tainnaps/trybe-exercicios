@@ -2,7 +2,6 @@
 
 const newEmployeeData = (name) => {
   const joinedName = name.split(' ').join('_');
-
   return {
     name,
     email: `${joinedName.toLowerCase()}@trybe.com`,
