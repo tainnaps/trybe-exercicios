@@ -7,6 +7,7 @@ const arrays = [
 function flatten(matrix) {
   const reduced = matrix.reduce((accumulator, currentValue) => {
     accumulator.push(...currentValue);
+
     return accumulator;
   }, []);
 
