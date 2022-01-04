@@ -31,6 +31,7 @@
       <p>Color: <span id="value">white</span></p>
       <button id="previous">Previous color</button>
       <button id="next">Next color</button>
+      <button id="random">Random color</button>
     </div>
     <script>
       const ESTADO_INICIAL = {
@@ -39,6 +40,7 @@
       };
       const NEXT_COLOR = 'NEXT_COLOR';
       const PREVIOUS_COLOR = 'PREVIOUS_COLOR';
+      const RANDOM_COLOR = 'RANDOM_COLOR';
 
       const goToNextColor = () => ({
         type: NEXT_COLOR,
@@ -46,6 +48,10 @@
 
       const goToPreviousColor = () => ({
         type: PREVIOUS_COLOR,
+      });
+
+      const goToRandomColor = () => ({
+        type: RANDOM_COLOR,
       });
 
       const reducer = (state = ESTADO_INICIAL, action) => {
@@ -56,10 +62,15 @@
               index: state.index === state.colors.length - 1 ? 0 : state.index + 1,
             };
           case PREVIOUS_COLOR:
-          return {
-            ...state,
-            index: state.index <= 0 ? 0 : state.index - 1,
-          };
+            return {
+              ...state,
+              index: state.index <= 0 ? 0 : state.index - 1,
+            };
+          case RANDOM_COLOR:
+            return {
+              colors: [...state.colors, generateRandomColor()],
+              index: state.colors.length,
+            };
           default:
             return state;
         }
@@ -69,12 +80,16 @@
 
       previousBtn = document.getElementById('previous');
       nextBtn = document.getElementById('next');
+      randomBtn = document.getElementById('random');
 
       previousBtn.addEventListener('click', () => {
         store.dispatch(goToPreviousColor());
       });
       nextBtn.addEventListener('click', () => {
         store.dispatch(goToNextColor());
+      });
+      randomBtn.addEventListener('click', () => {
+        store.dispatch(goToRandomColor());
       });
 
       const changeColor = () => {
@@ -84,6 +99,16 @@
 
         color.innerHTML = colors[index];
         container.style.backgroundColor = colors[index];
+      }
+
+      const generateRandomColor = () => {
+        const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        let color = '#';
+        const random = () => Math.floor(Math.random() * oneChar.length);
+        for (let i = 0; i < 6; i += 1) {
+          color += oneChar[random()];
+        }
+        return color;
       }
 
       store.subscribe(() => {
