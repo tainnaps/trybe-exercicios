@@ -37,6 +37,58 @@
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
+      const NEXT_COLOR = 'NEXT_COLOR';
+      const PREVIOUS_COLOR = 'PREVIOUS_COLOR';
+
+      const goToNextColor = () => ({
+        type: NEXT_COLOR,
+      });
+
+      const goToPreviousColor = () => ({
+        type: PREVIOUS_COLOR,
+      });
+
+      const reducer = (state = ESTADO_INICIAL, action) => {
+        switch (action.type) {
+          case NEXT_COLOR:
+            return {
+              ...state,
+              index: state.index === state.colors.length - 1 ? 0 : state.index + 1,
+            };
+          case PREVIOUS_COLOR:
+          return {
+            ...state,
+            index: state.index <= 0 ? 0 : state.index - 1,
+          };
+          default:
+            return state;
+        }
+      }
+
+      const store = Redux.createStore(reducer);
+
+      previousBtn = document.getElementById('previous');
+      nextBtn = document.getElementById('next');
+
+      previousBtn.addEventListener('click', () => {
+        store.dispatch(goToPreviousColor());
+      });
+      nextBtn.addEventListener('click', () => {
+        store.dispatch(goToNextColor());
+      });
+
+      const changeColor = () => {
+        const color = document.getElementById('value');
+        const container = document.getElementById('container');
+        const { colors, index } = store.getState();
+
+        color.innerHTML = colors[index];
+        container.style.backgroundColor = colors[index];
+      }
+
+      store.subscribe(() => {
+        changeColor();
+      });
     </script>
   </body>
 </html>
