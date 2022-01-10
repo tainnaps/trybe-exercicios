@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta FULLname="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
   </head>
@@ -22,6 +22,20 @@
       <p>Cidade: <span id="cidade-2">São Paulo</span></p>
     </div>
     <script>
+      const FULL_NAME_1 = {
+        nome: 'Adriana',
+        sobrenome: 'Lima',
+      };
+      const FULL_NAME_2 = {
+        nome: 'Alessandra',
+        sobrenome: 'Ambrosio',
+      };
+
+      // Action types
+      const CHANGE_FIRST_REDUCER_FULLNAME = 'CHANGE_FIRST_REDUCER_FULLNAME';
+      const CHANGE_SECOND_REDUCER_FULLNAME = 'CHANGE_SECOND_REDUCER_FULLNAME';
+
+      // Reducers's initial states
       const ESTADO_INICIAL_1 = {
         nome: 'Rodrigo',
         sobrenome: 'Santos da Silva',
@@ -36,8 +50,26 @@
         cidade: 'São Paulo',
       };
 
+      // Action creators
+      const changeFirstReducerFullName = (payload) => ({
+        type: CHANGE_FIRST_REDUCER_FULLNAME,
+        payload,
+      });
+
+      const changeSecondReducerFullName = (payload) => ({
+        type: CHANGE_SECOND_REDUCER_FULLNAME,
+        payload,
+      });
+
+      // Reducers
       const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
+          case CHANGE_FIRST_REDUCER_FULLNAME:
+            return {
+              ...state,
+              nome: action.payload.nome,
+              sobrenome: action.payload.sobrenome,
+            };
           default:
             return state;
         }
@@ -45,12 +77,45 @@
 
       const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
         switch (action.type) {
+          case CHANGE_SECOND_REDUCER_FULLNAME:
+            return {
+              ...state,
+              nome: action.payload.nome,
+              sobrenome: action.payload.sobrenome,
+            };
           default:
             return state;
         }
       };
 
-      
+      // Combined Reducer
+      const rootReducer = Redux.combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
+
+      // Store
+      const store = Redux.createStore(rootReducer);
+
+      // Dispatchs
+      window.onload = () => {
+        setTimeout(() => {
+          store.dispatch(changeFirstReducerFullName(FULL_NAME_1));
+          store.dispatch(changeSecondReducerFullName(FULL_NAME_2));
+        }, 3000);
+      };
+
+      // Subscribe state changes to the page
+      store.subscribe(() => {
+        const state = store.getState();
+
+        const firstReducerName = document.getElementById('nome-1');
+        const firstReducerLastName = document.getElementById('sobrenome-1');
+        const secondReducerName = document.getElementById('nome-2');
+        const secondReducerLastName = document.getElementById('sobrenome-2');
+
+        firstReducerName.innerText = state.meuPrimeiroReducer.nome;
+        firstReducerLastName.innerText = state.meuPrimeiroReducer.sobrenome;
+        secondReducerName.innerText = state.meuSegundoReducer.nome;
+        secondReducerLastName.innerText = state.meuSegundoReducer.sobrenome;
+      });
     </script>
   </body>
 </html>
