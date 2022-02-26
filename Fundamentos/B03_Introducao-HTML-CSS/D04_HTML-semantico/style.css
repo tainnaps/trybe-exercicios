@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background-color: #f8edeb;
+    font-family: 'Urbanist', sans-serif;
+    color: #223843;
+}
+
+.header {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b5/Odontodactylus_scyllarus1.jpg);
+    padding: 80px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #2a9d8f;
+    padding: 40px;
+    text-align: center;
+}
+
+.navigation {
+    text-align: center;
+    background-color: #f4a261;
+    padding: 1px 0;
+    position: sticky;
+}
+
+ul.nav-list li {
+    display: inline;
+    list-style: none;
+    margin: 40px;
+    font-size: 1.2em;
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 3%;
+    margin: 20px;
+    padding: 30px;
+    text-align: justify;
+}
+
+.picture {
+    width: 200px;
+    height: 130px;
+    border-radius: 45%;
+    display: block;
+    margin: 30px auto;
+}
+
+section.references ul li a, nav ul li a {
+    text-decoration: none;
+    color: #223843;
+}
+
+.vision, .aggressivity, .strength {
+    width: 25%;
+    height: 400px;
+    display: inline-block;
+    margin-left: 27px;
+}
+
+section.section h2 {
+    text-align: center;
+}
+
+a:hover {
+    font-size: large;
+}
+
+section.aside p {
+    text-align: center;
+}
