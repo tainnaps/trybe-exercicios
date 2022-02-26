@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.2</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function createElementHTML(tagName) {
+      return document.createElement(tagName);
+    }
+
+    function defineClassName(element, nameOfClass) {
+      element.className = nameOfClass;
+    }
+
+    function appendElement(parentElement, childElement) {
+      parentElement.appendChild(childElement);
+    }
+
+    function changeInnerText(element, text) {
+      element.innerText = text;
+    }
+
+    function removeElement(parentElement, childElement) {
+      parentElement.removeChild(childElement);
+    }
+
+    // Questão 1
+    const body = document.querySelector('body');
+    let h1 = createElementHTML('h1');
+    let h1Content = 'Exercício 5.2 - JavaScript DOM';
+    changeInnerText(h1, h1Content);
+    appendElement(body, h1);
+
+    //Questão 2
+    let main = createElementHTML('main');
+    defineClassName(main, 'main-content');
+    appendElement(body, main);
+
+    //Questão 3
+    let centerSection = createElementHTML('section');
+    defineClassName(centerSection, 'center-content');
+    appendElement(main, centerSection);
+
+    //Questão 4
+    let paragraph = createElementHTML('p');
+    let paragraphContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit auctor nisl, ut lobortis nulla posuere egestas. Vivamus id augue sed nisi tempor accumsan.';
+    changeInnerText(paragraph, paragraphContent);
+    appendElement(centerSection, paragraph);
+
+    //Questão 5
+    let leftSection = createElementHTML('section');
+    defineClassName(leftSection, 'left-content');
+    appendElement(main, leftSection);
+
+    //Questão 6
+    let rightSection = createElementHTML('section');
+    defineClassName(rightSection, 'right-content');
+    appendElement(main, rightSection);
+
+    //Questão 7
+    let image = createElementHTML('img');
+    image.src = 'https://picsum.photos/200';
+    defineClassName(image, 'small-image');
+    appendElement(leftSection, image);
+
+    //Questão 8
+    let unorderedList = createElementHTML('ul');
+    appendElement(rightSection, unorderedList);
+
+    let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    for (const element of numbers) {
+      let listItem = createElementHTML('li');
+      changeInnerText(listItem, element);
+      appendElement(unorderedList, listItem);
+    }
+
+    //Questão 9
+    for (let index = 0; index < 3; index += 1) {
+      let h3 = createElementHTML('h3');
+      defineClassName(h3, 'description');
+      appendElement(main, h3);
+    }
+
+    defineClassName(h1, 'title');
+
+    removeElement(main, leftSection);
+
+    rightSection.style.marginRight = 'auto';
+
+    centerSection.parentElement.style.backgroundColor = 'green';
+
+    const listItems = document.querySelectorAll('li');
+    removeElement(unorderedList, listItems[8]);
+    removeElement(unorderedList, listItems[9]);
+  </script>
+</body>
+
+</html>
