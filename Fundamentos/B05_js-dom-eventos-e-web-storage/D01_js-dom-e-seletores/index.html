@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.1</title>
+
+  <style>
+    main,
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+  </header>
+  <main class="main-content">
+    <section class="center-content">
+      <p id="description">Texto padrão do nosso site</p>
+      <p>-----</p>
+      <p>Trybe</p>
+    </section>
+  </main>
+  <script>
+    function changeText(idName, text) {
+      document.getElementById(idName).innerText = text;
+    }
+    changeText('description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum posuere nulla in vehicula.');
+
+    function changeBackgroundColor(className, color) {
+      document.getElementsByClassName(className)[0].style.backgroundColor = color;
+    }
+    changeBackgroundColor('main-content', 'rgb(76,164,109)');
+    changeBackgroundColor('center-content', 'rgb(255,255,255)');
+
+    function changeH1Text(tagName, sentence) {
+      document.getElementsByTagName(tagName)[0].innerText = sentence;
+    }
+    changeH1Text('h1', 'Exercise 5.1 - DOM and selectors');
+
+    function changeTextToUpperCase(idName) {
+      const element = document.getElementById(idName);
+      const text = element.innerText.toUpperCase();
+      element.innerText = text;
+    }
+    changeTextToUpperCase('description');
+
+    function contentExhibition(tagName) {
+      const tagList = document.getElementsByTagName(tagName);
+      for (const element of tagList) {
+        console.log(element.innerText);
+      }
+    }
+    contentExhibition('p');
+  </script>
+</body>
+
+</html>
