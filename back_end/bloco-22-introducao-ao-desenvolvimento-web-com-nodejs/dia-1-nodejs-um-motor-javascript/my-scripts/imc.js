@@ -25,4 +25,4 @@ const calculateIMC = () => {
   console.log(`Hello, ${userName}! Your IMC is ${userIMC} and you have ${userStatus}.`);
 }
 
-calculateIMC();
+module.exports = calculateIMC;

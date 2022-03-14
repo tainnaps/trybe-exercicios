@@ -8,4 +8,4 @@ const calculateVelocity = () => {
   console.log(`The car average velocity is ${velocity}.`);
 }
 
-calculateVelocity();
+module.exports = calculateVelocity;
