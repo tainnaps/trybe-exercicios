@@ -3,8 +3,8 @@ const readlineSync = require('readline-sync');
 const calculateIMC = () => {
   let userStatus = '';
   const userName = readlineSync.question('What is your name? ');
-  const userWeight = readlineSync.questionFloat('What is your weight? ');
-  const userHeight = readlineSync.questionFloat('What is your height? ');
+  const userWeight = readlineSync.questionFloat('What is your weight (kg)? ');
+  const userHeight = readlineSync.questionFloat('What is your height (m)? ');
 
   const userIMC = (userWeight / (userHeight ** 2)).toFixed(2);
 
