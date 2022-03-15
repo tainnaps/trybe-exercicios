@@ -95,4 +95,3 @@ Dica: Utilize a classe RegExp do JS para substituir todas as ocorrências da pal
 11 - Se o número for múltiplo de 3 e 5, resolva a Promise com o valor "FizzBuzz".
 
 12 - Caso contrário, rejeite a Promise com o valor do número.
-
