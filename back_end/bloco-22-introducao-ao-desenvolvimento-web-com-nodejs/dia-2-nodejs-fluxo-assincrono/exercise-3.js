@@ -17,5 +17,3 @@ async function callOperateNumbers() {
 };
 
 callOperateNumbers();
-
-console.log(randomNumbers);
