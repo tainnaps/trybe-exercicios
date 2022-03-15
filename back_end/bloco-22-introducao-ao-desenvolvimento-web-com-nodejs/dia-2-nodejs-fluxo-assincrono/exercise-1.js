@@ -1,4 +1,4 @@
-function recieveOnlyNumbers(num1, num2, num3) {
+function operateNumbers(num1, num2, num3) {
   return new Promise((resolve, reject) => {
     if (typeof num1 !== 'number' || typeof num2 !== 'number' || typeof num3 !== 'number') {
       return reject('Informe apenas números');
@@ -14,4 +14,4 @@ function recieveOnlyNumbers(num1, num2, num3) {
   });
 }
 
-module.exports = recieveOnlyNumbers;
+module.exports = operateNumbers;
