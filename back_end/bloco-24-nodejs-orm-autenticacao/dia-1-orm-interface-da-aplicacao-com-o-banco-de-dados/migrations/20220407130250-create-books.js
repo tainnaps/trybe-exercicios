@@ -19,6 +19,7 @@ module.exports = {
       },
       pageQuantity: {
         type: Sequelize.INTEGER,
+        field: 'page_quantity',
       },
       createdAt: {
         type: Sequelize.DATE,
