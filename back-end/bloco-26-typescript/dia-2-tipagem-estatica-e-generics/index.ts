@@ -1,0 +1,37 @@
+import Car from './car';
+import { Colors, Doors, Directions } from './types';
+
+const car1 = new Car('Volkswagen Gol', Colors.SILVER, 4);
+
+car1.openTheDoor(Doors.DRIVER);
+car1.closeTheDoor(Doors.DRIVER);
+car1.turnOn();
+car1.speedUp();
+car1.speedDown();
+car1.turn(Directions.LEFT);
+car1.speedUp();
+car1.speedDown();
+car1.turn(Directions.RIGHT);
+car1.speedUp();
+car1.speedDown();
+car1.turn(Directions.RIGHT);
+car1.speedUp();
+car1.speedDown();
+car1.stop();
+car1.openTheDoor(Doors.BEHIND_RIDE);
+car1.closeTheDoor(Doors.BEHIND_RIDE);
+car1.speedUp();
+car1.speedDown();
+car1.turn(Directions.RIGHT);
+car1.speedUp();
+car1.speedDown();
+car1.turn(Directions.LEFT);
+car1.speedUp();
+car1.speedDown();
+car1.turn(Directions.RIGHT);
+car1.speedUp();
+car1.speedDown();
+car1.stop();
+car1.openTheDoor(Doors.BEHIND_RIDE);
+car1.closeTheDoor(Doors.BEHIND_RIDE);
+car1.speedUp();
