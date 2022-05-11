@@ -23,3 +23,22 @@ export interface Pizza {
   flavor: string;
   slices: Slices;
 }
+
+export type Simple = 'Calabresa' | 'Frango' | 'Pepperoni';
+
+export type Veggie = 'Marguerita' | 'Palmito' | 'Cogumelo';
+
+export type Sweet = 'Nutela' | 'Goiabada com Queijo' | 'Marshmallow';
+
+export interface SimplePizza extends Pizza {
+  flavor: Simple;
+}
+
+export interface VeggiePizza extends Pizza {
+  flavor: Veggie;
+}
+
+export interface SweetPizza extends Pizza {
+  flavor: Sweet;
+  slices: 4;
+}

@@ -1,5 +1,5 @@
 import Car from './car';
-import { Colors, Doors, Directions, Pizza } from './types';
+import { Colors, Doors, Directions, Pizza, SimplePizza, VeggiePizza, SweetPizza } from './types';
 
 const car1 = new Car('Volkswagen Gol', Colors.SILVER, 4);
 
@@ -59,3 +59,31 @@ const nutela: Pizza = {
 };
 
 console.log(nutela);
+
+const frango: SimplePizza = {
+  flavor: 'Frango',
+  slices: 8,
+}
+
+console.log(frango);
+
+const calabresa: SimplePizza = {
+  flavor: 'Calabresa',
+  slices: 6,
+}
+
+console.log(calabresa);
+
+const palmito: VeggiePizza = {
+  flavor: 'Palmito',
+  slices: 6,
+}
+
+console.log(palmito);
+
+const marshmallow: SweetPizza = {
+  flavor: 'Marshmallow',
+  slices: 4,
+}
+
+console.log(marshmallow);

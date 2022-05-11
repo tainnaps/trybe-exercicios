@@ -53,3 +53,23 @@ const nutela = {
     slices: 4,
 };
 console.log(nutela);
+const frango = {
+    flavor: 'Frango',
+    slices: 8,
+};
+console.log(frango);
+const calabresa = {
+    flavor: 'Calabresa',
+    slices: 6,
+};
+console.log(calabresa);
+const palmito = {
+    flavor: 'Palmito',
+    slices: 6,
+};
+console.log(palmito);
+const marshmallow = {
+    flavor: 'Marshmallow',
+    slices: 4,
+};
+console.log(marshmallow);
