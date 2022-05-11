@@ -42,3 +42,5 @@ export interface SweetPizza extends Pizza {
   flavor: Sweet;
   slices: 4;
 }
+
+export type Callback<T> = (item: T, index?: number, arr?: T[]) => boolean;
